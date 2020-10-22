@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('Archive') {
       steps {
         archiveArtifacts(artifacts: '*.*', fingerprint: true)
       }
