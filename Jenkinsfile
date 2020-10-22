@@ -13,9 +13,9 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
-        copyArtifacts(projectName: 'Deal', fingerprintArtifacts: true)
+        copyArtifacts(projectName: 'jenkins-docker-int', fingerprintArtifacts: true)
       }
     }
 
