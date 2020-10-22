@@ -8,14 +8,25 @@ pipeline {
     }
 
     stage('Archive') {
-      steps {
-        archiveArtifacts(artifacts: '*.*', fingerprint: true)
+      parallel {
+        stage('Archive') {
+          steps {
+            archiveArtifacts(artifacts: '*.*', fingerprint: true)
+          }
+        }
+
+        stage('') {
+          steps {
+            sh 'echo deal2'
+          }
+        }
+
       }
     }
 
-    stage('error') {
+    stage('') {
       steps {
-        copyArtifacts(projectName: 'jenkins-docker-int', fingerprintArtifacts: true)
+        sh 'echo deal3'
       }
     }
 
