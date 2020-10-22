@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        copyArtifacts(projectName: 'Deal', fingerprintArtifacts: true)
+      }
+    }
+
   }
 }
