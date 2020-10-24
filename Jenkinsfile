@@ -15,7 +15,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             sh 'echo deal2'
           }
@@ -24,7 +24,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         sh 'echo deal3'
       }
